@@ -1,0 +1,238 @@
+/* color palette:
+action-color: #ffed91;
+*/
+
+body {
+  height: 100vh;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+.hints {
+  height: 50vh;
+  width: 100%;
+}
+.buttons {
+  height: 50vh;
+  width: 100%;
+  position: relative;
+}
+.buttons a {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  display: block;
+}
+.top-left-btn {
+  top: 0;
+  left: 0;
+  background-color: #ffceda;
+}
+.top-right-btn {
+  top: 0;
+  right: 0;
+  background-color: #90e3ff;
+}
+.btm-left-btn {
+  bottom: 0;
+  left: 0;
+  background-color: #ccc55f;
+}
+.btm-right-btn {
+  bottom: 0;
+  right: 0;
+  background-color: #b2b195;
+}
+.buttons {
+  background-color: #fff;
+}
+.buttons a:hover:not(.disabled) {
+  opacity: 0.75;
+}
+a.disabled:hover, a.disabled:focus {
+  cursor: default;
+}
+.btn-info {
+  background-color: #ffed91;
+  color: #121212;
+}
+.btn-info:hover, btn-info:focus {
+  background-color: #ffed91;
+  color: #fff;
+}
+.btn-default.active {
+  background-color: rgba(85,133,150,0.9);
+  border-color: #fff;
+  color: #fff;
+}
+/* while the pattern is presented a user can't see any changes on buttons hovering them */
+.btn-default.active:hover {
+  background-color: rgba(85,133,150,0.9);
+  border-color: #ffed91;
+  color: #ffed91;
+}
+.box {
+  height: 50%;
+  width: 100%;
+}
+.start {
+  background-color: #cc5f79;
+}
+.info, .settings {
+  background-color: #558596;  
+}
+h1, h2 {
+  margin-top: 0;
+  padding: 0.5em 0 0;
+}
+.restart {
+  margin-top: 1em;
+}
+.ghost-btn {
+  background-color: transparent;
+  border-color: #fff;
+}
+.ghost-btn:focus, .ghost-btn:active {
+  color: #fff;
+}
+.ghost-btn:hover {
+  border: 1px solid #ffed91;
+  color: #ffed91;
+}
+.strict-tgl {
+  margin-top: 0;
+}
+.parent {
+  display: table;
+}
+.child {
+  display: table-cell;
+  vertical-align: middle;
+}
+.col-xs-12, col-md-6 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.invisible {
+  visibility: hidden;
+}
+.checkbox label {
+  padding-left: 5px;
+}
+
+/* media queries */
+/* from tablets horizontally */
+@media screen and (min-width: 769px and max-width: 1024px) {
+  .hints {
+    height: 100vh;
+    width: 50%;
+  }
+  .buttons {
+    height: 100vh;
+    width: 50%;
+  }
+}
+/* any mobile device in orientation landscape */
+@media screen and (orientation: landscape) {
+  .hints {
+    height: 100vh;
+    width: 50%;
+  }
+  .buttons {
+    height: 100vh;
+    width: 50%;
+  }
+}
+/* tablets vertically */
+@media screen and (min-width:768px) and (max-width:1023px) {
+  h1 {
+    margin-bottom: 1em;
+  }
+  h2 {
+    font-size: 3em;
+  }
+  h3 {
+    font-size: 2em;
+  }
+  .settings {
+    font-size: 2em;
+  }
+  #play-btn {
+    font-size: 4em;
+  }
+  .restart {
+    font-size: 1em;
+  }
+}
+/* large screens */
+@media screen and (min-width: 1024px) {
+  body {
+    background-color: #f9ffd0;
+  }
+  h1 {
+    margin-bottom: 10px;
+  }
+  #play-btn {
+    font-size: 1.5em;
+    background-color: #ffed91;
+    color: #000;
+  }
+  #play-btn:hover {
+    background-color: #f9ffd0;
+  }
+  .hints {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -150px;
+    z-index: 20;
+    height: 300px;
+    width: 300px;
+  }
+  .hints .settings {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    /* fix for IE from 50-50 */
+    top: 49.5%;
+    height: 50.5%;
+  }
+  .hints .start, .hints .info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 50%;
+    height: 50%;
+    border-radius: 10px 10px 0 0;
+  }
+  .buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -300px 0 0 -300px;
+    width: 600px;
+    height: 600px;
+    box-shadow: 5px 5px 5px #888888;
+    border-radius: 10px;
+  }
+  .box {
+    height: auto;
+    padding: 1em 0;
+    background-color: #558596;
+  }
+  .top-left-btn {
+    border-radius: 10px 0 0;
+  }
+  .top-right-btn {
+    border-radius: 0 10px 0 0;
+  }
+  .btm-left-btn {
+    border-radius: 0 0 0 10px;
+  }
+  .btm-right-btn {
+    border-radius: 0 0 10px 0;
+  }
+  
+}
